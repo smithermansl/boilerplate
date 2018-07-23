@@ -1,5 +1,5 @@
 module.exports = {
-  entry: './client/index.js',
+  entry: './app/index.js',
   mode: 'development',
   output: {
     path: __dirname,
@@ -14,6 +14,13 @@ module.exports = {
         use: {
           loader: 'babel-loader'
         }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
       }
     ]
   }
